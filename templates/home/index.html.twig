@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div style="position: relative;width: 100%;">
+        <h1>Card game</h1>
+        <div style="position: relative; width: 25%; float: left;">
+            <h2>Unsorted hand</h2>
+            {% for card in unsorted %}
+                <p>{{ card.value }} of {{ card.colour }}</p>
+            {% endfor %}
+        </div>
+        <div style="position: relative; width: 25%; float: left;">
+            <h2>Colour sort</h2>
+            {% for colour in colourSort %}
+                <p>{{ colour }}</p>
+            {% endfor %}
+        </div>
+        <div style="position: relative; width: 25%; float: left;">
+            <h2>Value sort</h2>
+            {% for value in valueSort %}
+                <p>{{ value }}</p>
+            {% endfor %}
+        </div>
+        <div style="position: relative; width: 25%; float: left;">
+            <h2>Sorted hand</h2>
+            {% for card in sorted %}
+                <p>{{ card.value }} of {{ card.colour }}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
